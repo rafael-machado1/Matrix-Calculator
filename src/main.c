@@ -38,21 +38,21 @@ int main()
 
 		switch(operacao)
 		{
-				case '+':
+		    case '+':
 					
-					break;
-				case '-':
+				break;
+			case '-':
 					
-					break;
-				case '*':
+				break;
+			case '*':
 					
-					break;
-				case '/':
+				break;
+			case '/':
 					
-					break;
-				default:
-					printf("Digite uma operação válida!\n");
-					break;
+				break;
+			default:
+				printf("Digite uma operação válida!\n");
+				break;
 		}
 
 
