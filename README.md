@@ -51,4 +51,4 @@ gcc src/main.c -o ../bin/MatrixCalculator
 cd bin && ./MatrixCalculator
 ```
 
-### For any suggestions or doubts, feel free to email me: rafaelmachadocd37@gmail.com
+### For any suggestions or doubts, feel free to [email](rafaelmachadocd37@gmail.com) me
