@@ -9,8 +9,6 @@ void printMatrix(int tamanho, int a[tamanho][tamanho])
 			int matrixA = a[i][j];
 			printf("%d\t",matrixA);
 		}
-
 		printf("\n");
-
     }
 }
