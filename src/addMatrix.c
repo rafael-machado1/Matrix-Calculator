@@ -2,7 +2,7 @@
 
 // Para matrizes quadradas
 // Caso não quadradas, definir qtd de linhas e qtd de colunas
-void add(int tamanho, int a[tamanho][tamanho], int b[tamanho][tamanho], int sum[tamanho][tamanho])
+void addMatrix(int tamanho, int a[tamanho][tamanho], int b[tamanho][tamanho], int sum[tamanho][tamanho])
 {
 	for (int i = 0; i < tamanho; i++)
 	{
