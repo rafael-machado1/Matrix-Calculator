@@ -1,3 +1,3 @@
 #pragma once
 
-void div(float i, float j);
+void div(int tamanho, int a[tamanho][tamanho], int b[tamanho][tamanho], int div[tamanho][tamanho]);
