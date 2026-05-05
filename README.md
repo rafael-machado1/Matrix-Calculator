@@ -33,6 +33,12 @@ ________/\\\\\\\\\_________________/\\\\\\__________________
 
 - Be sure you have GCC or any C compiler
 
+- Create a bin folder by using this command:
+
+```Linux
+mkdir bin
+```
+
 - Clone this repository and run this command
 
 ```GCC
