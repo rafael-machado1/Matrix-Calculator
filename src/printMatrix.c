@@ -1,6 +1,6 @@
-#include "printMatrix.h"
+#include "../include/print.h"
 
-void printMatrix(int a[], int tamanho)
+void printMatrix(int tamanho, int a[tamanho][tamanho])
 {
     for (int i = 0; i < tamanho; i++)
     {
