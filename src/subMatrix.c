@@ -1,6 +1,6 @@
 #include "../include/sub.h"
 
-void sub(int tamanho, int a[tamanho][tamanho], int b[tamanho][tamanho], int sub[tamanho][tamanho])
+void subMatrix(int tamanho, int a[tamanho][tamanho], int b[tamanho][tamanho], int sub[tamanho][tamanho])
 {
 	for (int i = 0; i < tamanho; i++)
 	{
