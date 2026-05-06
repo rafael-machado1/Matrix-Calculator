@@ -1,3 +1,3 @@
 #pragma once
 
-void multi(float i, float j);
+void multi(int tamanho, int a[tamanho][tamanho], int b[tamanho][tamanho], int multi[tamanho][tamanho]);
