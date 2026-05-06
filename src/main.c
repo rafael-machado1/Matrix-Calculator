@@ -2,8 +2,8 @@
 #include <stdbool.h>
 #include "addMatrix.c"
 #include "subMatrix.c"
-#include "MultiMatrix.c"
-#include "DivMatrix.c"
+#include "multiMatrix.c"
+#include "divMatrix.c"
 #include "printMatrix.c"
 #include "scanMatrix.c"
 
@@ -43,6 +43,7 @@ int main()
 			"> "
 		);
 
+        // É necessário guardar as matrizes na memória para usá-las depois
         int matrixA[ordem][ordem];
         int matrixB[ordem][ordem];
 
@@ -52,10 +53,13 @@ int main()
 		{
 		    case '+':
             {
+                // Gerar na memória a matriz resultante
                 int sum[ordem][ordem];
 
+                printf("\nMatriz A:\n");
                 scanMatrix(ordem, matrixA);
-                printf("\n");
+
+                printf("\nMatriz B:\n");
                 scanMatrix(ordem, matrixB);
 
                 addMatrix(ordem, matrixA, matrixB, sum);
@@ -70,10 +74,13 @@ int main()
 
 			case '-':
             {
+                // Gerar na memória a matriz resultante
                 int sub[ordem][ordem];
 
+                printf("\nMatriz A:\n");
                 scanMatrix(ordem, matrixA);
-                printf("\n");
+
+                printf("\nMatriz B:\n");
                 scanMatrix(ordem, matrixB);
 
                 subMatrix(ordem, matrixA, matrixB, sub);
@@ -88,7 +95,19 @@ int main()
 
 			case '*':
             {
+                int multi[ordem][ordem];
 
+                printf("\nMatriz A:\n");
+                scanMatrix(ordem, matrixA);
+
+                printf("\nMatriz B:\n");
+                scanMatrix(ordem, matrixB);
+
+                multiMatrix(ordem, matrixA, matrixB, multi);
+
+                printf("\nA matriz resultante é:\n\n");
+                printMatrix(ordem, multi);
+                printf("\n\n");
 
                 running = false;
 				break;
@@ -96,11 +115,13 @@ int main()
 
 			case '/':
             {
-    
+                // Gerar na memória a matriz resultante
                 int div[ordem][ordem];
 
+                printf("\nMatriz A:\n");
                 scanMatrix(ordem, matrixA);
-                printf("\n");
+
+                printf("\nMatriz B:\n");
                 scanMatrix(ordem, matrixB);
 
                 // Se tiver divisão por 0, quebra tudo
