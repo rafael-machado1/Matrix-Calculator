@@ -10,11 +10,12 @@ void multiMatrix(int tamanho, int a[tamanho][tamanho], int b[tamanho][tamanho], 
     {
         for (int j = 0; j < tamanho; j++)
         {
+
+            multi[i][j] = 0;
+
             for (int k = 0; k < tamanho; k++)
             {
-            // É possível multilplicar
-            int termo[i][j] = a[i][j+1] * b[i+1][j];
-            multi[i][j] = termo[i][j] + termo[i][j];
+                multi[i][j] += a[i][k] * b[k][j];
             }
         }
     }
