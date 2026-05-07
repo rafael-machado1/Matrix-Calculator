@@ -31,6 +31,7 @@ int main()
 	{
 			int ordem;
 			char operacao;
+            char continuar;
 
 			printf("\n\n\nOrdem da matriz quadrada (NxN)\n> ");
 			scanf("%d",&ordem);
@@ -68,7 +69,18 @@ int main()
                 printMatrix(ordem, sum);
                 printf("\n\n");
 
-                running = false;
+                printf("Deseja continuar?(y/n)\n>");
+                scanf(" %c", &continuar);
+
+                if (continuar == 'y')
+                {
+                    running = true;
+                } 
+                else
+                {
+                    running = false;
+                }
+                
 				break;
             }
 
@@ -89,8 +101,17 @@ int main()
                 printMatrix(ordem, sub);
                 printf("\n\n");
 
-                running = false;
-				break;
+                printf("Deseja continuar?(y/n)\n>");
+                scanf(" %c", &continuar);
+
+                if (continuar == 'y')
+                {
+                    running = true;
+                } 
+                else
+                {
+                    running = false;
+                }
             }
 
 			case '*':
@@ -109,8 +130,17 @@ int main()
                 printMatrix(ordem, multi);
                 printf("\n\n");
 
-                running = false;
-				break;
+                printf("Deseja continuar?(y/n)\n>");
+                scanf(" %c", &continuar);
+
+                if (continuar == 'y')
+                {
+                    running = true;
+                } 
+                else
+                {
+                    running = false;
+                }
             }
 
 			case '/':
@@ -131,8 +161,17 @@ int main()
                 printMatrix(ordem, div);
                 printf("\n\n");
 
-                running = false;
-				break;
+                printf("Deseja continuar?(y/n)\n>");
+                scanf(" %c", &continuar);
+
+                if (continuar == 'y')
+                {
+                    running = true;
+                } 
+                else
+                {
+                    running = false;
+                }
             }
 
 			default:
@@ -140,11 +179,5 @@ int main()
                 running = false;
 				break;
 		}
-
-        break;
-
-
-
 	}
-
 }
