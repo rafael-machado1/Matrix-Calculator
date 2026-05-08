@@ -48,168 +48,140 @@ int main()
         if(escolha)
         {
             char operacao;
-            scanf(" %c", &operacao);
 
-            if(operacao)
-            {
-                printf("\nDeseja fazer qual operação matemática?\n"
-                    "Para soma digite: +\n"
-                    "Para subtração digite: -\n"
-                    "Para multiplicação digite: *\n"
-                    "Para divisão digite: /\n"
-                    "> "
+            
+            printf("\nDeseja fazer qual operação matemática?\n"
+                "Para soma digite: +\n"
+                "Para subtração digite: -\n"
+                "Para multiplicação digite: *\n"
+                "Para divisão digite: /\n> "
                 );
 
-                // É necessário guardar as matrizes na memória para usá-las depois
-                int matrixA[ordem][ordem];
-                int matrixB[ordem][ordem];
+            scanf(" %c", &operacao);
+
+            // É necessário guardar as matrizes na memória para usá-las depois
+            int matrixA[ordem][ordem];
+            int matrixB[ordem][ordem];
 
 
-                switch(operacao)
+            switch(operacao)
+            {
+                case '+':
                 {
-                    case '+':
-                    {
-                        // Gerar na memória a matriz resultante
-                        int sum[ordem][ordem];
+                    // Gerar na memória a matriz resultante
+                    int sum[ordem][ordem];
 
-                        printf("\nMatriz A:\n");
-                        scanMatrix(ordem, matrixA);
+                    printf("\nMatriz A:\n");
+                    scanMatrix(ordem, matrixA);
 
-                        printf("\nMatriz B:\n");
-                        scanMatrix(ordem, matrixB);
+                    printf("\nMatriz B:\n");
+                    scanMatrix(ordem, matrixB);
 
-                        addMatrix(ordem, matrixA, matrixB, sum);
+                    addMatrix(ordem, matrixA, matrixB, sum);
 
-                        printf("\nA matriz resultante é:\n\n");
-                        printMatrix(ordem, sum);
-                        printf("\n\n");
+                    printf("\nA matriz resultante é:\n\n");
+                    printMatrix(ordem, sum);
+                    printf("\n\n");
 
-                        printf("Deseja continuar?(y/n)\n>");
-                        scanf(" %c", &continuar);
-
-                        if (continuar == 'y')
-                        {
-                            running = true;
-                        } 
-                        else
-                        {
-                            running = false;
-                        }
+                    printf("Deseja continuar?(y/n)\n> ");
+                    scanf(" %c", &continuar);
                         
-                        break;
-                    }
-
-                    case '-':
-                    {
-                        // Gerar na memória a matriz resultante
-                        int sub[ordem][ordem];
-
-                        printf("\nMatriz A:\n");
-                        scanMatrix(ordem, matrixA);
-
-                        printf("\nMatriz B:\n");
-                        scanMatrix(ordem, matrixB);
-
-                        subMatrix(ordem, matrixA, matrixB, sub);
-
-                        printf("\nA matriz resultante é:\n\n");
-                        printMatrix(ordem, sub);
-                        printf("\n\n");
-
-                        printf("Deseja continuar?(y/n)\n>");
-                        scanf(" %c", &continuar);
-
-                        if (continuar == 'y')
-                        {
-                            running = true;
-                        } 
-                        else
-                        {
-                            running = false;
-                        }
-                    }
-
-                    case '*':
-                    {
-                        int multi[ordem][ordem];
-
-                        printf("\nMatriz A:\n");
-                        scanMatrix(ordem, matrixA);
-
-                        printf("\nMatriz B:\n");
-                        scanMatrix(ordem, matrixB);
-
-                        multiMatrix(ordem, matrixA, matrixB, multi);
-
-                        printf("\nA matriz resultante é:\n\n");
-                        printMatrix(ordem, multi);
-                        printf("\n\n");
-
-                        printf("Deseja continuar?(y/n)\n>");
-                        scanf(" %c", &continuar);
-
-                        if (continuar == 'y')
-                        {
-                            running = true;
-                        } 
-                        else
-                        {
-                            running = false;
-                        }
-                    }
-
-                    case '/':
-                    {
-                        // Gerar na memória a matriz resultante
-                        int div[ordem][ordem];
-
-                        printf("\nMatriz A:\n");
-                        scanMatrix(ordem, matrixA);
-
-                        printf("\nMatriz B:\n");
-                        scanMatrix(ordem, matrixB);
-
-                        // Se tiver divisão por 0, quebra tudo
-                        divMatrix(ordem, matrixA, matrixB, div);
-
-                        printf("\nA matriz resultante é:\n\n");
-                        printMatrix(ordem, div);
-                        printf("\n\n");
-
-                        printf("Deseja continuar?(y/n)\n>");
-                        scanf(" %c", &continuar);
-
-                        if (continuar == 'y')
-                        {
-                            running = true;
-                        } 
-                        else
-                        {
-                            running = false;
-                        }
-                    }
-
-                    default:
-                        printf("Digite uma operação válida!\n");
-                        running = false;
-                        break;
+                    break;
                 }
+
+                case '-':
+                {
+                    // Gerar na memória a matriz resultante
+                    int sub[ordem][ordem];
+
+                    printf("\nMatriz A:\n");
+                    scanMatrix(ordem, matrixA);
+
+                    printf("\nMatriz B:\n");
+                    scanMatrix(ordem, matrixB);
+
+                    subMatrix(ordem, matrixA, matrixB, sub);
+
+                    printf("\nA matriz resultante é:\n\n");
+                    printMatrix(ordem, sub);
+                    printf("\n\n");
+
+                    printf("Deseja continuar?(y/n)\n> ");
+                    scanf(" %c", &continuar);
+
+                    break;
+                }
+
+                case '*':
+                {
+                    int multi[ordem][ordem];
+
+                    printf("\nMatriz A:\n");
+                    scanMatrix(ordem, matrixA);
+
+                    printf("\nMatriz B:\n");
+                    scanMatrix(ordem, matrixB);
+
+                    multiMatrix(ordem, matrixA, matrixB, multi);
+
+                    printf("\nA matriz resultante é:\n\n");
+                    printMatrix(ordem, multi);
+                    printf("\n\n");
+
+                    printf("Deseja continuar?(y/n)\n> ");
+                    scanf(" %c", &continuar);
+
+                    break;
+                }
+
+                case '/':
+                {
+                    // Gerar na memória a matriz resultante
+                    int div[ordem][ordem];
+
+                    printf("\nMatriz A:\n");
+                    scanMatrix(ordem, matrixA);
+
+                    printf("\nMatriz B:\n");
+                    scanMatrix(ordem, matrixB);
+
+                    // Se tiver divisão por 0, quebra tudo
+                    divMatrix(ordem, matrixA, matrixB, div);
+
+                    printf("\nA matriz resultante é:\n\n");
+                    printMatrix(ordem, div);
+                    printf("\n\n");
+
+                    printf("Deseja continuar?(y/n)\n> ");
+                    scanf(" %c", &continuar);
+
+                    break;
+                }
+
+                default:
+                    printf("Digite uma operação válida!\n");
+                    running = false;
+                    break;
+                    
             }
+            
         }
         // Cálculo do determinante
         else
         {
+            int matrixA[ordem][ordem];
             int det;
 
             printf("\nMatriz A:\n");
             scanMatrix(ordem, matrixA);
-            detMatrix(ordem, matrixA, det);
-            printf("\ndet(A) = %d\n\n", det);
+
+            printf("\ndet(A) = %d\n\n", detMatrix(ordem, matrixA));
 
             printf("Deseja continuar?(y/n)\n>");
             scanf(" %c", &continuar);
-                    
-            if (continuar == 'y')
+        }
+        
+        if (continuar == 'y')
             {
                 running = true;
             } 
@@ -217,7 +189,5 @@ int main()
             {
                 running = false;
             }
-        }  
-        }
     }
 }
