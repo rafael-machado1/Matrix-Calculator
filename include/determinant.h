@@ -1,3 +1,3 @@
 #pragma once
 
-void determinant(int tamanho, a[tamanho][tamanho], det)
+int detMatrix(int tamanho, int a[tamanho][tamanho]);
