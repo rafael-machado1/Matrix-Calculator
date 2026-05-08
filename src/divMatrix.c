@@ -9,9 +9,8 @@ void divMatrix(int tamanho, int a[tamanho][tamanho], int b[tamanho][tamanho], in
             // Divisão por zero
             if (b[i][j] == 0)
             {
-                printf("\n\nDivisão por zero\n");
-                break;
-                break;
+                printf("\n\nDivisão por zero!\n");
+                return;
             }
             else
             {
