@@ -32,7 +32,7 @@ int main()
 	{   
         int escolha;
 		int ordem;
-        char continuar;
+        char continuar = 'n';
 
         printf("\n\nBem-vindo à Calculadora de Matrizes!\n\n");
         printf("Deseja saber o determinante de uma matriz (máximo 3x3) ou realizar cálculos entre duas matrizes?\n"
@@ -161,7 +161,7 @@ int main()
                 default:
                     printf("Digite uma operação válida!\n");
                     running = false;
-                    break;
+                    continue;
                     
             }
             
@@ -180,16 +180,15 @@ int main()
             }
             else
             {
-                int matrixTemp[ordem][ordem];
                 int matrixA[ordem][ordem];
                 int det;
 
                 printf("\nMatriz A:\n");
                 scanMatrix(ordem, matrixA);
 
-                printf("\ndet(A) = %d\n\n", detMatrix(ordem, matrixA, matrixTemp));
+                printf("\ndet(A) = %d\n\n", detMatrix(ordem, matrixA));
 
-                printf("Deseja continuar?(y/n)\n>");
+                printf("Deseja continuar?(y/n)\n> ");
                 scanf(" %c", &continuar);   
             }
         }
