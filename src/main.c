@@ -35,8 +35,8 @@ int main()
         char continuar;
 
         printf("\n\nBem-vindo à Calculadora de Matrizes!\n\n");
-        printf("Deseja saber o determinante de uma matriz ou realizar cálculos entre duas matrizes?\n"
-            "Digite (0) para a primeira opção ou\n"
+        printf("Deseja saber o determinante de uma matriz (máximo 3x3) ou realizar cálculos entre duas matrizes?\n"
+            "Digite (0) para a primeira opção\n"
             "Digite (1) para a segunda opção\n> "
         );
         scanf("%d",&escolha);
@@ -167,20 +167,33 @@ int main()
             
         }
         // Cálculo do determinante
+        // Matriz no máximo 3x3
+        // Task: Teorema de Laplace para solução de matriz maiores ou iguais à 4x4
         else
         {
-            int matrixA[ordem][ordem];
-            int det;
+            if(ordem > 3)
+            {
+                printf("Deseja saber o determinante de uma matriz (máximo 3x3) ou realizar cálculos entre duas matrizes?\n"
+                    "                                                 ^^^\n"
+                    "\nDigite apenas matrizes no máximo 3x3\n\n\n"
+                );
+            }
+            else
+            {
+                int matrixTemp[ordem][ordem];
+                int matrixA[ordem][ordem];
+                int det;
 
-            printf("\nMatriz A:\n");
-            scanMatrix(ordem, matrixA);
+                printf("\nMatriz A:\n");
+                scanMatrix(ordem, matrixA);
 
-            printf("\ndet(A) = %d\n\n", detMatrix(ordem, matrixA));
+                printf("\ndet(A) = %d\n\n", detMatrix(ordem, matrixA, matrixTemp));
 
-            printf("Deseja continuar?(y/n)\n>");
-            scanf(" %c", &continuar);
+                printf("Deseja continuar?(y/n)\n>");
+                scanf(" %c", &continuar);   
+            }
         }
-        
+
         if (continuar == 'y')
             {
                 running = true;
@@ -190,4 +203,7 @@ int main()
                 running = false;
             }
     }
+    
+    return 0;
+    
 }
