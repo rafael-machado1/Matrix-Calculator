@@ -1,3 +1,3 @@
 #pragma once
 
-int detMatrix(int tamanho, int a[tamanho][tamanho], int matrizTemp[tamanho][tamanho]);
+int detMatrix(int tamanho, int a[tamanho][tamanho]);
