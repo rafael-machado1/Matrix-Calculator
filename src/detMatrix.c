@@ -1,7 +1,7 @@
 #include "../include/determinant.h"
 
 // Apenas até matrizes 3x3
-int detMatrix(int tamanho, int a[tamanho][tamanho], int matrizTemp[tamanho][tamanho])
+int detMatrix(int tamanho, int a[tamanho][tamanho])
 {
     if (tamanho == 1)
     {
@@ -14,16 +14,13 @@ int detMatrix(int tamanho, int a[tamanho][tamanho], int matrizTemp[tamanho][tama
     else if (tamanho == 3)
     {
         // Regra de Sarrus
+        int det = 0;
         for (int i = 0; i < tamanho; i++)
         {
-            for (int j = 0; j < tamanho; j++)
-            {
-                for (int k = 0; k < tamanho + 2; k++)
-                {
-                    matrixTemp[3][k] = a[i][j];
-                    matrixTemp[]
-                }
-            }
+            det += a[0][i] * a[1][(i + 1) % 3] * a[2][(i + 2) % 3];
+            det -= a[0][(i + 2) % 3] * a[1][(i + 1) % 3] * a[2][i];
         }
+
+        return det;
     }
 }
