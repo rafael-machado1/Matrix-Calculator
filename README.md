@@ -33,10 +33,6 @@ ________/\\\\\\\\\_________________/\\\\\\__________________
 
 - Be sure you have GCC or any C compiler
 
-```Linux
-mkdir bin
-```
-
 - Clone this repository and run this command
 
 ```GCC
